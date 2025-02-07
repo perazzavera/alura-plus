@@ -6,6 +6,7 @@
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --fonte-principal: "Inter", serif;
+    --fonte-tamanho-principal: 1rem;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: var(--fonte-tamanho-principal);
     font-weight: 400;
 }
 
@@ -36,11 +37,11 @@ body {
 }
     
 .container__caixa {
-    margin: 0 6em;
+    margin: 0 6rem;
 }
 
 .container__titulo {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
@@ -64,7 +65,7 @@ body {
 }
 
 .container__info {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--cinza-secundario);
 }
 
@@ -79,7 +80,7 @@ body {
 
 .descricao__titulo {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     margin-bottom: 0.1em;
 }
 
@@ -120,7 +121,7 @@ body {
 .dispositivos__titulo {
     font-family: var(--fonte-principal);
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rempx;
     color: var(--branco-principal);
  }
 
@@ -129,7 +130,7 @@ body {
  }
 
  .lista__item {
-    font-size: 32px;
+    font-size: 1rem;
     color: var(--branco-principal);
  }
 
@@ -152,7 +153,7 @@ body {
  }
 
  .rodape__texto {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--cinza-secundario);
     margin: 1em 0;
  }
@@ -173,3 +174,71 @@ body {
     background-color: var(--cinza-secundario);
     color: var(--cor-de-fundo);
  }
+
+ /* Responsividade */
+@media (max-width: 480px) {
+    .principal{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        margin: 1em;
+        text-align: center;
+    }
+   
+    .secundario {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .terciario {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        
+    }
+
+    .container__caixa {
+        justify-content: center;
+        text-align: center;
+    }
+
+    
+    .container__botao {
+        display: flex;
+        text-align: center;
+        width: 19rem;
+        justify-content: center;
+    }
+
+
+    .dispositivos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dispositivos__lista {
+      display: block;
+    }
+
+    .lista__item {
+        display: block;
+        margin: 1rem;
+        font-size: ;
+    }
+
+    .rodape {
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .rodape__lista {
+        display: block;
+        padding: 1.5rem;
+    }
+}
